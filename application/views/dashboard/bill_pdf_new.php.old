@@ -1,0 +1,120 @@
+<style>  
+.table{width:100%;}
+.table th,.table td {
+    border-bottom: 1px #ddd;
+	font-size:13px;
+}
+.borderless tr,.borderless td{
+    border: none !important;
+}
+tr.spaceUnder > td
+{
+  padding-bottom: 1em;
+}
+tr.spaceUpper > td
+{
+  padding-top: .5em;
+}
+td
+{
+  padding-top: .3em;
+}
+.billhead{font-size:13px;}
+.cntct{font-size:13px;}
+</style>
+		    
+<div class="container">
+					    <div class="billhead">
+						    <h5 style="text-align: center;">WIC India</h5>
+							<p style="text-align: center;">RU</p><br>
+							<p>Pan No : </p>
+							<p>Tin No : </p>
+							<p>Service Tax Code : </p>
+					
+						</div><hr>
+						<div>
+						     <table class="table borderless">
+							     <tr class="spaceUpper">
+								    <td colspan="5">Member Name : <?php echo $memberData->member_name; ?></td>
+								 </tr>
+								 <tr class="spaceUpper">
+								    <td colspan="5">Member ID : <?php echo $memberData->membership_id; ?></td>
+								 </tr>	
+								 <tr class="spaceUpper">
+								    <td colspan="2">Bill ID : <?php echo $billId; ?></td>
+									<td colspan="3">Time : <small><?php echo date('h:i A');?></small></td>
+								 </tr>							     
+								 <tr class="spaceUpper">
+								    <td colspan="2">Date</td>
+									<td>Table</td>
+									<td>Cvr</td>
+									<td>Stw</td>
+								 </tr>
+								 <tr class="spaceUpper">
+								    <td colspan="2"><?php echo date('d/m/Y');?></td>
+									<td><?php echo $memberData->table_name; ?></td>
+									<td><?php echo $memberData->no_of_guest; ?></td>
+									<td></td>
+									
+								 </tr>
+							 </table>
+						</div><hr>
+						<div>
+							    <table class="table borderless">
+							     <tr>
+								    <td colspan="2">Item Name</td>
+									<td>Quantity</td>
+									<td>Rate</td>
+									<td>Amount</td>
+								 </tr>
+								 <?php foreach($orderData as $order){?>
+								 <tr class="spaceUpper">
+								    <td colspan="2"><small><?php echo $order['meal_name'] ?></small></td>
+									<td><?php echo $order['quantity'] ?></td>
+									<td><?php echo $order['meal_price'] ?></td>
+									<td><?php echo $order['amount'] ?></td>
+								 </tr>
+								 <?php } ?>
+							    </table>
+						</div><hr>
+						<div>
+							    <table class="table borderless">
+							     <tr>
+								    <td colspan="4">Sub Total</td>
+									<td><?php echo $billingData->subtotal; ?></td>
+								 </tr>
+								<?php $totalTax=0;
+									$totalDiscount=$billingData->subtotal*$discount/100;
+								foreach($flagData as $fdata){
+									if($fdata['flag_type']==0)
+									{
+										$totalTax=$totalTax+($billingData->subtotal*$fdata['percentage'])/100;
+									}
+									?>
+								 <tr class="spaceUpper">
+								    <td colspan="4"><?php echo $fdata['flag_name']?></td>
+									<td><?php echo ($billingData->subtotal*$fdata['percentage'])/100;?></td>
+								 </tr>
+								 
+								 <?php } ?>
+								 <tr class="spaceUpper">
+								    <td colspan="4">Total Bill</td>
+									<td><?php echo $billingData->subtotal+$totalTax; ?></td>
+								 </tr>
+								 <tr>
+								    <td colspan="4" class="spaceUpper">Discount</td>
+									<td><?php echo $totalDiscount;?></td>
+								 </tr>
+								 
+								 <tr class="spaceUpper">
+								    <td colspan="4">Payble Bill</td>
+									<td><?php echo $billingData->subtotal+$totalTax-$totalDiscount; ?></td>
+								 </tr>
+							    </table>
+						</div><hr>
+						<div class="cntct">
+						        <br><br>
+							    <small>Contact Name: PBO Plus</small><br>
+							    <small>Contact No : 1234567890</small>
+						</div>
+</div>

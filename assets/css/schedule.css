@@ -1,0 +1,147 @@
+
+.scheduler,.scheduler *{
+	box-sizing:content-box !important;
+}
+.scheduler .clear{ clear:both; height: 0; line-height: 0;}
+.scheduler .sc_wrapper{
+	    clear: both;
+}
+.scheduler .sc_menu{
+	width:100%;
+	height:30px;
+}
+.scheduler .sc_menu .sc_header_cell{
+	float:left;
+}
+.scheduler .sc_menu .sc_header{
+	float:left;
+	height:30px;
+	position:relative;
+	overflow:hidden;
+}
+.scheduler .sc_menu .sc_header .sc_time{
+	text-align:center;
+	border-left:solid 1px #FFF;
+	background:#222;
+}
+.scheduler .sc_menu .sc_header_cell,
+.scheduler .sc_data{
+	float:left;
+	font-weight:normal;
+	color:#FFFFFF;
+	background:#222;
+	position:relative;
+}
+.scheduler .sc_menu .sc_header_scroll,
+.scheduler .sc_data .sc_data_scroll{
+	position:absolute;
+	left:0;
+	top:0;
+}
+.scheduler .sc_menu .sc_header_cell,
+.scheduler .sc_header .sc_time,
+.scheduler .sc_main_scroll .sc_time{
+	color:#FFFFFF;
+	padding:4px 0;
+	line-height:18px;
+	height:18px;
+	display:block;
+}
+.scheduler .sc_menu .sc_header_cell,.scheduler .sc_header .sc_time{
+	padding:5px 0;
+	height:20px;
+}
+.scheduler .sc_header .sc_time,
+.scheduler .sc_main_scroll .sc_time{
+	float:left;
+}
+.scheduler .sc_main_box,
+.scheduler .sc_data{
+	overflow:hidden;
+}
+.scheduler .sc_data{
+	background:#333;
+	color:#fff;
+}
+.scheduler .sc_data .sc_data_scroll{
+	background:#16A085;
+}
+.scheduler .sc_main_box{
+	float:left;
+	overflow-x:auto;
+	    overflow-y: hidden;
+}
+.scheduler .sc_main_scroll{
+}
+.scheduler .sc_main{
+	position:relative;
+	
+}
+.scheduler .timeline{
+	position:relative;
+}
+.scheduler .sc_Bar{
+	position:absolute;
+	color:#FFF;
+	background:#4f93d6;
+	z-index:10;
+	    margin-left: -7px;
+}
+.scheduler .ui-draggable-dragging,
+.scheduler .ui-resizeable{
+	z-index:20;
+}
+.scheduler .sc_Bar .head{
+	display:inline-block;
+	padding:6px 8px 0;
+	font-size:12px;
+	overflow:hidden;
+}
+.scheduler .sc_Bar .text{
+	display:inline-block;
+	padding: 0px 9px 0;
+	font-weight:600;
+	overflow:hidden;
+	font-size:11px;
+	    float: left;
+}
+.scheduler .sc_Bar .btext{
+	display:inline;
+	padding: 0;
+	font-size:12px;
+}
+.scheduler .timeline,
+.scheduler .sc_main .tb{
+	    border-bottom: solid 3px #eee;
+}
+.scheduler .timeline:last-child{
+border:none;	
+}
+.scheduler .sc_data .timeline{
+	overflow:hidden;
+}
+.scheduler .sc_data .timeline span{
+	    padding: 7px 10px;
+	display:block;
+}
+.scheduler .sc_data .timeline span.photo{
+	float:left;
+	width:36px;
+	height:36px;
+	padding:10px 0 10px 10px;
+}
+.scheduler .sc_data .timeline span.title{
+	float:left;
+	padding:10px 0 10px 10px;
+	width:92px;
+}
+.scheduler .sc_main_scroll .sc_main{
+}
+.scheduler .sc_main_scroll .sc_main .tl{
+	float:left;
+	height:100%;
+	border-right:solid 1px #E8E8E8;
+}
+.scheduler .sc_main_scroll .sc_main .tl:hover{
+	
+}
