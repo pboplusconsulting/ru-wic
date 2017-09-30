@@ -1,0 +1,8 @@
+[29-Jun-2017 16:47:58 Asia/Kolkata] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in /home/surveyirbureau/public_html/ru/application/views/chef/chef_dashboard.php on line 355
+[29-Jun-2017 16:48:00 Asia/Kolkata] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in /home/surveyirbureau/public_html/ru/application/views/chef/chef_dashboard.php on line 355
+[29-Jun-2017 16:48:01 Asia/Kolkata] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in /home/surveyirbureau/public_html/ru/application/views/chef/chef_dashboard.php on line 355
+[29-Jun-2017 17:14:01 Asia/Kolkata] PHP Parse error:  syntax error, unexpected '}' in /home/surveyirbureau/public_html/ru/application/views/chef/chef_dashboard.php on line 375
+[29-Jun-2017 17:14:02 Asia/Kolkata] PHP Parse error:  syntax error, unexpected '}' in /home/surveyirbureau/public_html/ru/application/views/chef/chef_dashboard.php on line 375
+[06-Jul-2017 12:01:35 Asia/Kolkata] PHP Warning:  Unterminated comment starting line 588 in /home/surveyirbureau/public_html/ru/application/models/Base_model.php on line 588
+[06-Jul-2017 12:01:35 Asia/Kolkata] PHP Parse error:  syntax error, unexpected end of file, expecting function (T_FUNCTION) in /home/surveyirbureau/public_html/ru/application/models/Base_model.php on line 589
+[14-Jul-2017 15:19:17 Asia/Kolkata] PHP Fatal error:  Call to a member function insert_one_row() on null in /home/surveyirbureau/public_html/ru/application/controllers/Dashboard.php on line 541
